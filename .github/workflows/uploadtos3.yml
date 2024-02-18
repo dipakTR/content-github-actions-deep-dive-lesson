@@ -71,7 +71,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
-      - name: create lambda function
+      - name: create test function
         run: |
            aws lambda create-function --function-name test-function \
             --code S3Bucket=githubbucket18022024,S3Key=${{ github.sha }}.zip \  
