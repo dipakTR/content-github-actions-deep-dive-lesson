@@ -72,7 +72,7 @@ jobs:
           aws-region: ap-south-1
       - name: update function name
         run: |
-            aws lambda update-function-name \
+            aws lambda update-function-code \
                --function-name my-function
                --s3-bucket githubactionbucket17022024 \
                --s3-key ${{ github.sha }}.zip \
