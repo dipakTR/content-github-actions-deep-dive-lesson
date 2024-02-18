@@ -71,12 +71,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
       - name: update function name
-          run:|
-             aws lambda update-function-name \
-                -- function-name my-function
-                --s3-bucket githubactionbucket17022024 \
-                --s3-key ${{ github.sha }}.zip \
-                --publish
+          run: |
+              aws lambda update-function-name \
+                 --function-name my-function
+                 --s3-bucket githubactionbucket17022024 \
+                 --s3-key ${{ github.sha }}.zip \
+                 --publish
                 
                 
           
